@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 col-md-8">
+          <img src="{{book.book_image}}" class="img-fluid img-details">
+        </div>
+        <div class="col-lg-8 col-md-4">
+          <h3>Description</h3>
+          <p>
+            {{book.description}}
+          </p>
+          <h3 class="my-3">Ahthors</h3>
+          <ul>
+            <li *ngFor="let author of book.authors">{{author}}</li>
+          </ul>
+        </div>
+      </div>
+</div>

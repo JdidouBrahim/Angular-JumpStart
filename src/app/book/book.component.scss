@@ -1,0 +1,8 @@
+@import '../../sass/tools';
+
+:host{
+    .img-details{
+        height: $img-details-height;
+        width: $img-details-width;
+    }
+}
