@@ -1,19 +1,24 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">GoodReads</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="/books">All Books <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Categories</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+<nav class="navbar navbar-inner navbar-fixed-top">
+  <div class="container">
+      <div class="navbar-header" >
+          <button type="button" class="navbar-toggle" >
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" routerLink="/customers">
+              <img src="assets/images/people.png" alt="logo" />
+              <span class="app-title">Customer Manager</span>
+          </a>
+          <span class="navbar-collapse" >
+              <ul class="nav navbar-nav nav-pills navBarPadding">
+                  <li routerLinkActive="active"><a routerLink="/customers">CustomersS</a></li>
+                  <li routerLinkActive="active"><a routerLink="/orders">Orders</a></li>
+                  <li routerLinkActive="active"><a routerLink="/about">About</a></li>
+                  <li routerLinkActive="active" (click)="loginOrLogout()" ><a >{{loginLogoutText}}</a></li>
+              </ul>
+          </span>
+      </div>
+  </div>
+</nav>

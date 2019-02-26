@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 //The dist folder has our static resources (index.html, css, images)
-app.use(express.static(__dirname + '/dist')); 
+app.use(express.static(__dirname + '/dist/myAngularJumpStart')); 
 
 app.get('/api/customers/page/:skip/:top', (req, res) => {
     const topVal = req.params.top,
@@ -113,7 +113,7 @@ app.post('/api/auth/logout', (req, res) => {
 
 // redirect all others to the index (HTML5 history)
 app.all('/*', function(req, res) {
-    res.sendFile(__dirname + '/dist/index.html');
+    res.sendFile(__dirname + '/dist/myAngularJumpStart/index.html');
 });
 
 app.listen(3000);

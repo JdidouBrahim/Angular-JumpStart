@@ -8,6 +8,7 @@ import { BooksComponent } from './books/books.component';
 import { BookComponent } from './book/book.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CustomersComponent } from './customers/customers.component';
+import { CustomerRoutingModule } from './customers/customer-routing.module';
 
 @NgModule({
   declarations: [
@@ -15,12 +16,11 @@ import { CustomersComponent } from './customers/customers.component';
     BooksComponent,
     BookComponent,
     NavbarComponent,
-    CustomersComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

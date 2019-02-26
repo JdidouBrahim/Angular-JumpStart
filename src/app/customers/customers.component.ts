@@ -5,7 +5,7 @@ import { Icustomer } from '../core/interfaces/customer/icustomer';
 @Component({
   selector: 'app-customers',
   templateUrl: './customers.component.html',
-  styleUrls: ['./customers.component.css']
+  styleUrls: ['./customers.component.scss']
 })
 export class CustomersComponent implements OnInit {
 
@@ -20,5 +20,9 @@ export class CustomersComponent implements OnInit {
       this.customersService.getCustomers().subscribe(customers=>{
         this.customers=customers;
       })
+  }
+
+  getCustomerPage(page:number){
+    
   }
 }

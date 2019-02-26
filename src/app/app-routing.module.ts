@@ -1,16 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { BooksComponent } from './books/books.component';
-import { BookComponent } from './book/book.component';
 
 const routes: Routes = [
   
-  {  path:'books',
-     component:BooksComponent
-  },
-  {  path:'books/:id',
-     component:BookComponent
-      }
+  { path:'customers',loadChildren:'./customers/customers.module#CustomersModule'},
+  { path: 'customers/:id', loadChildren: './customer/customer.module#CustomerModule' },
+  {path : 'login' , loadChildren : './login/login.module#LoginModule'}
 ];
 
 @NgModule({

@@ -1,0 +1,31 @@
+<form [formGroup]="loginForm" (ngSubmit)="submit(loginForm)" novalidate>
+    <div class="login">
+        <div class="row">
+            <div class="col-md-2 col-lg-2">
+                Email
+            </div>
+            <div class="col-md-10 col-lg-10">
+                <input type="email" id="email" name="email" class="form-control" formControlName="email">
+                <div class="alert alert-danger" [hidden]="loginForm.controls.email.untouched || loginForm.controls.email.valid">
+                    A valid email is required
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 col-lg-2">
+                Password
+            </div>
+            <div class="col-md-10 col-lg-10">
+                <input type="password" id="password" class="form-control" formControlName="password">
+                <div class="alert alert-danger" [hidden]="loginForm.controls.password.untouched || loginForm.controls.password.valid">
+                    A valid password is required    
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-lg-12">
+                <button type="submit" class="btn btn-success" [disabled]="!loginForm.valid">Login</button>
+            </div>    
+        </div>
+    </div>
+</form>
